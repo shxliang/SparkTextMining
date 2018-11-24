@@ -351,6 +351,7 @@ public class TextRankKeyword extends KeywordFilter {
                     keywordsValue.add(Math.max(keywordsValue.get(curWordIndex), keywordsValue.get(afterWordIndex)));
 //                    keywordsValue.add((keywordsValue.get(curWordIndex)+keywordsValue.get(afterWordIndex))/2);
 
+                    // 先删除大的下标，保证小的下标不变
                     keywordsValue.remove(Math.max(curWordIndex, afterWordIndex));
                     keywordsValue.remove(Math.min(curWordIndex, afterWordIndex));
                     keywords.remove(curWord);
